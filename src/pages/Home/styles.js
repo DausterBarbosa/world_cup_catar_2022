@@ -77,3 +77,79 @@ export const GroupTitle = Styled.div`
     color: #770d2a;
     font-size: 16px;
 `;
+
+export const ResultsTitle = Styled.div`
+    color: #FFF;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 0 40px 0;
+`;
+
+export const ResultsContainer = Styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+`;
+
+export const GroupResultContainer = Styled.div`
+    background: #ffc400;
+    padding: 3px;
+    border-radius: 15px;
+    width: 400px;
+`;
+
+export const GroupResultContainerTitle = Styled.div`
+    color: #770d2a;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+`;
+
+export const GroupResultContainerItem = Styled.div`
+    display: flex;
+    background: #FFF;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    & + & {
+        margin-top: 3px;
+    }
+
+    &:nth-child(7) {
+        border-radius: 0 0 15px 15px;
+    }
+
+    p {
+        color: #770d2a;
+        font-weight: bold;
+        font-size: 18px;
+        width: 100%;
+        text-align: right;
+    }
+
+    input {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #770d2a;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    input + input {
+        margin-left: 10px;
+    }
+
+    input + p {
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    p + input {
+        margin-left: 10px;
+    }
+`;

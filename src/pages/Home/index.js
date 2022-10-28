@@ -5,6 +5,11 @@ import {
     Group,
     GroupItem,
     GroupTitle,
+    ResultsContainer,
+    GroupResultContainer,
+    GroupResultContainerTitle,
+    GroupResultContainerItem,
+    ResultsTitle,
 } from "./styles";
 
 import Logo from "../../assets/images/logo.png";
@@ -14,7 +19,7 @@ export default function Home(){
         <HomeContainer>
             <HomeHeader>
                 <img src={Logo} alt="logo"/>
-                <button>INICIAR TODAS AS PARTIDAS</button>
+                <button>INICIAR FASE DE GRUPOS</button>
             </HomeHeader>
             <GroupsContainer>
                 <Group>
@@ -74,6 +79,321 @@ export default function Home(){
                     <GroupItem>Austrália</GroupItem>
                 </Group>
             </GroupsContainer>
+            <ResultsTitle>Resultados da fase de grupos</ResultsTitle>
+            <ResultsContainer>
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer>
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+                <GroupResultContainer>
+                    <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Argentina</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>USA</p>
+                            <input></input>
+                            <input></input>
+                            <p>Soviética</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>asdfasdf</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                    <GroupResultContainerItem>
+                            <p>Brasil</p>
+                            <input value="2"></input>
+                            <input></input>
+                            <p>Brasil</p>
+                    </GroupResultContainerItem>
+                </GroupResultContainer> 
+            </ResultsContainer>
         </HomeContainer>
     );
 }
