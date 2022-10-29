@@ -1,3 +1,5 @@
+import {useEffect, useState} from "react";
+
 import {
     HomeContainer,
     HomeHeader,
@@ -14,7 +16,31 @@ import {
 
 import Logo from "../../assets/images/logo.png";
 
+import Axios from "../../utils/axios";
+
+import GenerateGroups from "../../services/GenerateGroups";
+
 export default function Home(){
+	const [groups, setGroups] = useState();
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		async function HandleRequest(){
+			const teams = await Axios.get("WorldCup/GetAllTeams");
+			
+			const generatedGroups = GenerateGroups(teams.data.Result);
+
+			setGroups(generatedGroups);
+			setLoading(false);
+		}
+
+		HandleRequest();
+	}, []);
+
+	if(loading){
+		return <p>Carregando</p>;
+	}
+
     return (
         <HomeContainer>
             <HomeHeader>
@@ -22,69 +48,21 @@ export default function Home(){
                 <button>INICIAR FASE DE GRUPOS</button>
             </HomeHeader>
             <GroupsContainer>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
-                <Group>
-                    <GroupTitle>GRUPO A</GroupTitle>
-                    <GroupItem>Brasil</GroupItem>
-                    <GroupItem>Argentina</GroupItem>
-                    <GroupItem>Equador</GroupItem>
-                    <GroupItem>Austrália</GroupItem>
-                </Group>
+				{groups.map((group, index) => (
+					<Group key={group.token}>
+						<GroupTitle>GRUPO {String.fromCharCode(65 + index)}</GroupTitle>
+						{group.map((teams) => (
+							<GroupItem>{teams.Name}</GroupItem>
+						))}
+					</Group>
+				))}
             </GroupsContainer>
             <ResultsTitle>Resultados da fase de grupos</ResultsTitle>
             <ResultsContainer>
                 <GroupResultContainer>
                     <GroupResultContainerTitle>GRUPO A</GroupResultContainerTitle>
                     <GroupResultContainerItem>
-                            <p>Brasil</p>
+                            <p>Estados Unidos</p>
                             <input></input>
                             <input></input>
                             <p>Argentina</p>
