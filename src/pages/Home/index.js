@@ -12,9 +12,11 @@ import {
     GroupResultContainerTitle,
     GroupResultContainerItem,
     ResultsTitle,
+	LoadingPage,
 } from "./styles";
 
 import Logo from "../../assets/images/logo.png";
+import LoadLogo from "../../assets/images/loadLogo.png"
 
 import Axios from "../../utils/axios";
 
@@ -49,7 +51,11 @@ export default function Home(){
 	}, []);
 
 	if(loading){
-		return <p>Carregando</p>;
+		return (
+			<LoadingPage>
+				<img src={LoadLogo} alt="LoadLogo"/>
+			</LoadingPage>
+		);
 	}
 
     return (

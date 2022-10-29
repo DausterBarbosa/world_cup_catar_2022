@@ -1,5 +1,12 @@
 import Styled from "styled-components";
 
+export const LoadingPage = Styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+`;
+
 export const HomeContainer = Styled.div`
     max-width: 1100px;
     margin: 0 auto;
