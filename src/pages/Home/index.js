@@ -22,6 +22,7 @@ import Axios from "../../utils/axios";
 
 import GenerateGroups from "../../services/GenerateGroups";
 import GroupsStage from "../../services/GroupsStage";
+import ClassfiedTeams from "../../services/ClassfiedTeams";
 
 export default function Home(){
 	const [loading, setLoading] = useState(true);
@@ -32,6 +33,8 @@ export default function Home(){
 
 	function InitGroupStage(){
 		const results = GroupsStage(groups);
+
+		ClassfiedTeams(groups, results);
 
 		setGamesResults(results);
 		setShowResults(true);
