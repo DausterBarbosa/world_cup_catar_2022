@@ -10,12 +10,16 @@ export const LoadingPage = Styled.div`
 export const HomeContainer = Styled.div`
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const HomeHeader = Styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     img {
         height: 120px;
@@ -43,6 +47,7 @@ export const GroupsContainer = Styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     row-gap: 60px;
+    width: 100%;
 `;
 
 export const Group = Styled.div`
@@ -98,6 +103,7 @@ export const ResultsContainer = Styled.div`
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     row-gap: 20px;
+    width: 100%;
 `;
 
 export const GroupResultContainer = Styled.div`
@@ -158,5 +164,51 @@ export const GroupResultContainerItem = Styled.div`
 
     p + input {
         margin-left: 10px;
+    }
+`;
+
+export const ClassificadosTable = Styled.table`
+    background: #FFF;
+    color: #770d2a;
+    font-weight: bold;
+    font-size: 17px;
+    width: 700px;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+`;
+
+export const ClassificadosTableHeader = Styled.thead`
+    background: #ffc400;
+
+    th{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+    }
+`;
+
+export const ClassificadosRow = Styled.tr`
+    border-top: 3px solid #ffc400;
+`;
+
+export const ClassificadosCel = Styled.td`
+    padding: 10px;
+    text-align: center;
+`;
+
+export const NextStepButton = Styled.button`
+    background: #f73861;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 30px 0;
+
+    &:hover{
+        background: #e9355b;
     }
 `;

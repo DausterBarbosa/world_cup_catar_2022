@@ -13,6 +13,11 @@ import {
     GroupResultContainerItem,
     ResultsTitle,
 	LoadingPage,
+	ClassificadosTable,
+	ClassificadosRow,
+	ClassificadosCel,
+	ClassificadosTableHeader,
+	NextStepButton
 } from "./styles";
 
 import Logo from "../../assets/images/logo.png";
@@ -101,6 +106,25 @@ export default function Home(){
 						))}
 					</ResultsContainer>
 					<ResultsTitle>Classificados para oitavas de final</ResultsTitle>
+					<ClassificadosTable>
+						<ClassificadosTableHeader>
+							<th>PAÍS</th>
+							<th>GRUPO</th>
+							<th>PONTOS</th>
+							<th>GOLS</th>
+						</ClassificadosTableHeader>
+						{classificados.map((result, index) => (
+							result.map((team) => (
+								<ClassificadosRow>
+									<ClassificadosCel>{team.Name}</ClassificadosCel>
+									<ClassificadosCel>{String.fromCharCode(65 + index)}</ClassificadosCel>
+									<ClassificadosCel>{team.points}</ClassificadosCel>
+									<ClassificadosCel>{team.gols}</ClassificadosCel>
+								</ClassificadosRow>
+							))
+						))}
+					</ClassificadosTable>
+					<NextStepButton>IR PARA AS OITAVAS DE FINAL</NextStepButton>
 				</>
 			)}
         </HomeContainer>
