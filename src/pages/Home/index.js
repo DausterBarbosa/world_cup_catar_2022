@@ -30,13 +30,15 @@ export default function Home(){
 
 	const [groups, setGroups] = useState();
 	const [gamesResults, setGamesResults] = useState();
+	const [classificados, setClassificados] = useState();
 
 	function InitGroupStage(){
 		const results = GroupsStage(groups);
 
-		ClassfiedTeams(groups, results);
-
+		const classificadosResults = ClassfiedTeams(groups, results);
+		console.log(classificadosResults);
 		setGamesResults(results);
+		setClassificados(classificadosResults);
 		setShowResults(true);
 	}
 
@@ -98,6 +100,7 @@ export default function Home(){
 								</GroupResultContainer>
 						))}
 					</ResultsContainer>
+					<ResultsTitle>Classificados para oitavas de final</ResultsTitle>
 				</>
 			)}
         </HomeContainer>

@@ -43,7 +43,13 @@ function ClassfiedTeams(groups, results){
         });
     }
 
-    console.log(groups2)
+    let classificados = [];
+
+    for(let x = 0; x < groups2.length; x++){
+        classificados.push([groups2[x][0], groups2[x][1]]);
+    }
+
+    return classificados;
 }
 
 export default ClassfiedTeams;
