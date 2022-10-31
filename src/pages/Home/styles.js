@@ -171,7 +171,7 @@ export const ClassificadosTable = Styled.table`
     background: #FFF;
     color: #770d2a;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 16px;
     width: 700px;
     border-collapse: collapse;
     border-radius: 20px;
@@ -193,7 +193,7 @@ export const ClassificadosRow = Styled.tr`
 `;
 
 export const ClassificadosCel = Styled.td`
-    padding: 10px;
+    padding: 7px;
     text-align: center;
 `;
 

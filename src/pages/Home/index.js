@@ -41,7 +41,7 @@ export default function Home(){
 		const results = GroupsStage(groups);
 
 		const classificadosResults = ClassfiedTeams(groups, results);
-		console.log(classificadosResults);
+		
 		setGamesResults(results);
 		setClassificados(classificadosResults);
 		setShowResults(true);
