@@ -86,16 +86,16 @@ export default function Home(){
 					<ResultsContainer>
 						{gamesResults.map((resultGroup, index) => (
 								<GroupResultContainer>
-								<GroupResultContainerTitle>GRUPO {String.fromCharCode(65 + index)}</GroupResultContainerTitle>
-								{resultGroup.map((result) => (
-									<GroupResultContainerItem>
-										<p>{result.team1.name}</p>
-										<input readonly value={result.team1.gols}/>
-										<input readonly value={result.team2.gols}/>
-										<p>{result.team2.name}</p>
-									</GroupResultContainerItem>
-								))}
-							</GroupResultContainer>
+									<GroupResultContainerTitle>GRUPO {String.fromCharCode(65 + index)}</GroupResultContainerTitle>
+									{resultGroup.map((result) => (
+										<GroupResultContainerItem >
+											<p>{result.team1.name}</p>
+											<input readOnly value={result.team1.gols}/>
+											<input readOnly value={result.team2.gols}/>
+											<p>{result.team2.name}</p>
+										</GroupResultContainerItem>
+									))}
+								</GroupResultContainer>
 						))}
 					</ResultsContainer>
 				</>
