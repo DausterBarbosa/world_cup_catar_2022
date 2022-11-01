@@ -98,6 +98,10 @@ export const SecondStageContainer = Styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    & ${StageItemContainer} + ${StageItemContainer}{
+        margin-top: 170px;
+    }
 `;
 
 export const ThirdStageContainer = Styled.div`
