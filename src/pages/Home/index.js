@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 
+import {useNavigate} from "react-router-dom";
+
 import {
     HomeContainer,
     HomeHeader,
@@ -36,6 +38,12 @@ export default function Home(){
 	const [groups, setGroups] = useState();
 	const [gamesResults, setGamesResults] = useState();
 	const [classificados, setClassificados] = useState();
+
+	const navigate = useNavigate();
+
+	function HandleNavigation(){
+		navigate("/finalstage", {state: {teams: classificados}});
+	}
 
 	function InitGroupStage(){
 		const results = GroupsStage(groups);
@@ -124,7 +132,9 @@ export default function Home(){
 							))
 						))}
 					</ClassificadosTable>
-					<NextStepButton>IR PARA AS OITAVAS DE FINAL</NextStepButton>
+					<NextStepButton
+						onClick={HandleNavigation}
+					>IR PARA AS OITAVAS DE FINAL</NextStepButton>
 				</>
 			)}
         </HomeContainer>

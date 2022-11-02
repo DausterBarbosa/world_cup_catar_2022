@@ -1,13 +1,12 @@
 import GlobalStyle from "./assets/styles/globalStyles";
 
-import Home from "./pages/Home";
-import FinalStage from "./pages/FinalStage";
+import Routes from "./routes";
 
 function App() {
 	return (
     	<>
 			<GlobalStyle/>
-			<FinalStage/>
+			<Routes/>
     	</>
   	);
 }

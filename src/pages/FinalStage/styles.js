@@ -35,7 +35,7 @@ export const StagesContainer = Styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 15px;
 `;
 
 export const StageItemContainer = Styled.div`
@@ -51,6 +51,7 @@ export const StageItemContainer = Styled.div`
         border-radius: 15px;
         padding: 5px 10px;
         justify-content: center;
+        height: 45px;
 
         p {
             color: #770d2a;
