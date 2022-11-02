@@ -70,6 +70,8 @@ export default function FinalStage(){
                                     </div>
                                 </StageItemContainer>
                             );
+                        } else {
+                            return <></>
                         }
                     })}
                 </FirstStageContainer>
@@ -89,6 +91,8 @@ export default function FinalStage(){
                                     </div>
                                 </StageItemContainer>
                             );
+                        } else {
+                            return <></>
                         }
                     })}
                 </SecondStageContainer>
@@ -108,6 +112,8 @@ export default function FinalStage(){
                                     </div>
                                 </StageItemContainer>
                             );
+                        } else {
+                            return <></>
                         }
                     })}
                 </ThirdStageContainer>
@@ -128,6 +134,8 @@ export default function FinalStage(){
                                     </div>
                                 </StageItemContainer>
                             );
+                        }else {
+                            return <></>
                         }
                     })}
                 </ThirdStageContainer>
@@ -147,6 +155,8 @@ export default function FinalStage(){
                                     </div>
                                 </StageItemContainer>
                             );
+                        }else {
+                            return <></>
                         }
                     })}
                 </SecondStageContainer>
@@ -166,6 +176,8 @@ export default function FinalStage(){
                                     </div>
                                 </StageItemContainer>
                             );
+                        }else {
+                            return <></>
                         }
                     })}
                 </FirstStageContainer>
