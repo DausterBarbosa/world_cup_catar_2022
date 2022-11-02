@@ -2,6 +2,8 @@ import {useState} from "react";
 
 import {useLocation} from "react-router-dom";
 
+import Axios from "../../utils/axios";
+
 import {
     FinalStageContainer,
     FinalStageHeader,
@@ -31,7 +33,7 @@ export default function FinalStage(){
     const [semi, setSemi] = useState([]);
     const [final, setFinal] = useState([]);
 
-    function StartFinalStages(){
+    async function StartFinalStages(){
         const resultOitavas = FinalStages(state.teams);
         setOitavas(resultOitavas);
         const classificadosQuartas = FinalStagesClassification(resultOitavas);
@@ -43,8 +45,16 @@ export default function FinalStage(){
         const classificadosFinal = FinalStagesClassification(resultSemi);
         const resultFinal = FinalStages(classificadosFinal);
         setFinal(resultFinal);
-
         setStartStages(true);
+
+        await Axios.post("/WorldCup/InsertFinalResult", {
+            "equipeA": resultFinal[0][0].Token,
+            "equipeB": resultFinal[0][1].Token,
+            "golsEquipeA": resultFinal[0][0].gols,
+            "golsEquipeB": resultFinal[0][1].gols,
+            "golsPenaltyTimeA": 0,
+            "golsPenaltyTimeB": 0, 
+        });
     }
 
     return (

@@ -5,6 +5,10 @@ const api = Axios.create({
     headers: {
         get: {
             "git-user": "DausterBarbosa"
+        },
+
+        post: {
+            "git-user": "DausterBarbosa"
         }
     }
 });
