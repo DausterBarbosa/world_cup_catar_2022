@@ -36,6 +36,7 @@ export const StagesContainer = Styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 15px;
+    position: relative;
 `;
 
 export const StageItemContainer = Styled.div`
@@ -109,4 +110,10 @@ export const ThirdStageContainer = Styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+`;
+
+export const FourtStage = Styled.div`
+    position: absolute;
+    bottom: 40px;
+    left: 465px;
 `;

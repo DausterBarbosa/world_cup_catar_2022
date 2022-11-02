@@ -178,7 +178,7 @@ export const ClassificadosTable = Styled.table`
     overflow: hidden;
 `;
 
-export const ClassificadosTableHeader = Styled.thead`
+export const ClassificadosTableHeader = Styled.tr`
     background: #ffc400;
 
     th{

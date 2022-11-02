@@ -11,7 +11,10 @@ import {
     FirstStageContainer,
     SecondStageContainer,
     ThirdStageContainer,
+    FourtStage,
 } from "./styles";
+
+import LoadLogo from "../../assets/images/loadLogo.png";
 
 import Logo from "../../assets/images/logo.png";
 
@@ -20,6 +23,8 @@ import FinalStagesClassification from "../../services/FinalStagesClassification"
 
 export default function FinalStage(){
     const {state} = useLocation();
+
+    const [startStages, setStartStages] = useState(false);
 
     const [oitavas, setOitavas] = useState(state.teams);
     const [quartas, setQuartas] = useState([]);
@@ -35,15 +40,18 @@ export default function FinalStage(){
         const classificadosSemi = FinalStagesClassification(resultQuartas);
         const resultSemi = FinalStages(classificadosSemi);
         setSemi(resultSemi);
+        const classificadosFinal = FinalStagesClassification(resultSemi);
+        const resultFinal = FinalStages(classificadosFinal);
+        setFinal(resultFinal);
 
-        console.log(resultSemi);
+        setStartStages(true);
     }
 
     return (
         <FinalStageContainer>
             <FinalStageHeader>
                 <img src={Logo} alt="logo"/>
-                <button onClick={StartFinalStages}>INICIAR FASES FINAIS</button>
+                <button disabled={startStages} onClick={StartFinalStages}>INICIAR FASES FINAIS</button>
             </FinalStageHeader>
             <StagesContainer>
                 <FirstStageContainer>
@@ -51,14 +59,14 @@ export default function FinalStage(){
                     {oitavas.map((team, index) => {
                         if(index < 4){
                             return (
-                                <StageItemContainer>
+                                <StageItemContainer key={index}>
                                     <div>
                                         <p>{team[0].Name}</p>
-                                        <input value={team[0].gols}/>
+                                        {startStages === true && <input value={team[0].gols} readOnly/>}
                                     </div>
                                     <div>
                                         <p>{team[1].Name}</p>
-                                        <input value={team[1].gols}/>
+                                        {startStages === true && <input value={team[1].gols} readOnly/>}
                                     </div>
                                 </StageItemContainer>
                             );
@@ -70,14 +78,14 @@ export default function FinalStage(){
                     {quartas.map((team, index) => {
                         if(index < 2){
                             return (
-                                <StageItemContainer>
+                                <StageItemContainer key={index}>
                                     <div>
                                         <p>{team[0].Name}</p>
-                                        <input value={team[0].gols}/>
+                                        <input value={team[0].gols} readOnly/>
                                     </div>
                                     <div>
                                         <p>{team[1].Name}</p>
-                                        <input value={team[1].gols}/>
+                                        <input value={team[1].gols} readOnly/>
                                     </div>
                                 </StageItemContainer>
                             );
@@ -89,33 +97,34 @@ export default function FinalStage(){
                     {semi.map((team, index) => {
                         if(index < 1){
                             return (
-                                <StageItemContainer>
+                                <StageItemContainer key={index}>
                                     <div>
                                         <p>{team[0].Name}</p>
-                                        <input value={team[0].gols}/>
+                                        <input value={team[0].gols} readOnly/>
                                     </div>
                                     <div>
                                         <p>{team[1].Name}</p>
-                                        <input value={team[1].gols}/>
+                                        <input value={team[1].gols} readOnly/>
                                     </div>
                                 </StageItemContainer>
                             );
                         }
                     })}
                 </ThirdStageContainer>
+                {startStages === false && <img src={LoadLogo} alt="loadlogo"/>}
                 <ThirdStageContainer>
                     {semi.length !== 0 && <StageTitle>SEMIFINAL</StageTitle>}
                     {semi.map((team, index) => {
                         if(index >= 1){
                             return (
-                                <StageItemContainer>
+                                <StageItemContainer key={index}>
                                     <div>
                                         <p>{team[0].Name}</p>
-                                        <input value={team[0].gols}/>
+                                        <input value={team[0].gols} readOnly/>
                                     </div>
                                     <div>
                                         <p>{team[1].Name}</p>
-                                        <input value={team[1].gols}/>
+                                        <input value={team[1].gols} readOnly/>
                                     </div>
                                 </StageItemContainer>
                             );
@@ -127,14 +136,14 @@ export default function FinalStage(){
                     {quartas.map((team, index) => {
                         if(index >= 2){
                             return (
-                                <StageItemContainer>
+                                <StageItemContainer key={index}>
                                    <div>
                                         <p>{team[0].Name}</p>
-                                        <input value={team[0].gols}/>
+                                        <input value={team[0].gols} readOnly/>
                                     </div>
                                     <div>
                                         <p>{team[1].Name}</p>
-                                        <input value={team[1].gols}/>
+                                        <input value={team[1].gols} readOnly/>
                                     </div>
                                 </StageItemContainer>
                             );
@@ -146,20 +155,37 @@ export default function FinalStage(){
                     {oitavas.map((team, index) => {
                         if(index >= 4){
                             return (
-                                <StageItemContainer>
+                                <StageItemContainer key={index}>
                                     <div>
                                         <p>{team[0].Name}</p>
-                                        <input value={team[0].gols}/>
+                                        {startStages === true && <input value={team[0].gols} readOnly/>}
                                     </div>
                                     <div>
                                         <p>{team[1].Name}</p>
-                                        <input value={team[1].gols}/>
+                                        {startStages === true && <input value={team[1].gols} readOnly/>}
                                     </div>
                                 </StageItemContainer>
                             );
                         }
                     })}
                 </FirstStageContainer>
+                <FourtStage>
+                    {final.length !== 0 && (
+                        <>
+                            <StageTitle>FINAL</StageTitle>
+                            <StageItemContainer>
+                            <div>
+                                <p>{final[0][0].Name}</p>
+                                {startStages === true && <input value={final[0][0].gols} readOnly/>}
+                            </div>
+                            <div>
+                                <p>{final[0][1].Name}</p>
+                                {startStages === true && <input value={final[0][1].gols} readOnly/>}
+                            </div>
+                            </StageItemContainer>
+                        </>
+                    )}
+                </FourtStage>
             </StagesContainer>
         </FinalStageContainer>
     );

@@ -87,10 +87,10 @@ export default function Home(){
             </HomeHeader>
             <GroupsContainer>
 				{groups.map((group, index) => (
-					<Group key={group.token}>
+					<Group key={index}>
 						<GroupTitle>GRUPO {String.fromCharCode(65 + index)}</GroupTitle>
-						{group.map((teams) => (
-							<GroupItem>{teams.Name}</GroupItem>
+						{group.map((teams, index) => (
+							<GroupItem key={index}>{teams.Name}</GroupItem>
 						))}
 					</Group>
 				))}
@@ -100,10 +100,10 @@ export default function Home(){
 					<ResultsTitle>Resultados da fase de grupos</ResultsTitle>
 					<ResultsContainer>
 						{gamesResults.map((resultGroup, index) => (
-								<GroupResultContainer>
+								<GroupResultContainer key={index}>
 									<GroupResultContainerTitle>GRUPO {String.fromCharCode(65 + index)}</GroupResultContainerTitle>
-									{resultGroup.map((result) => (
-										<GroupResultContainerItem >
+									{resultGroup.map((result, index) => (
+										<GroupResultContainerItem key={index}>
 											<p>{result.team1.name}</p>
 											<input readOnly value={result.team1.gols}/>
 											<input readOnly value={result.team2.gols}/>
@@ -121,9 +121,9 @@ export default function Home(){
 							<th>PONTOS</th>
 							<th>GOLS</th>
 						</ClassificadosTableHeader>
-						{classificados.map((result, index) => (
-							result.map((team) => (
-								<ClassificadosRow>
+						{classificados.map((result) => (
+							result.map((team, index) => (
+								<ClassificadosRow key={index}>
 									<ClassificadosCel>{team.Name}</ClassificadosCel>
 									<ClassificadosCel>{String.fromCharCode(65 + index)}</ClassificadosCel>
 									<ClassificadosCel>{team.points}</ClassificadosCel>
