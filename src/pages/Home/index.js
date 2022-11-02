@@ -121,9 +121,9 @@ export default function Home(){
 							<th>PONTOS</th>
 							<th>GOLS</th>
 						</ClassificadosTableHeader>
-						{classificados.map((result) => (
-							result.map((team, index) => (
-								<ClassificadosRow key={index}>
+						{classificados.map((result, index) => (
+							result.map((team) => (
+								<ClassificadosRow>
 									<ClassificadosCel>{team.Name}</ClassificadosCel>
 									<ClassificadosCel>{String.fromCharCode(65 + index)}</ClassificadosCel>
 									<ClassificadosCel>{team.points}</ClassificadosCel>
