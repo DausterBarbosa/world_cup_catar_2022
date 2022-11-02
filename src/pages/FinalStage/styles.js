@@ -101,7 +101,7 @@ export const SecondStageContainer = Styled.div`
     align-items: center;
 
     & ${StageItemContainer} + ${StageItemContainer}{
-        margin-top: 170px;
+        margin-top: 180px;
     }
 `;
 
